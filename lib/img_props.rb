@@ -40,7 +40,8 @@ class ImgProperties
   end
 
   def attr_style_img
-    return '' unless @style && !@style.empty?
+    # append attr_width_style if it's not nil
+    @style = "#{@style} #{attr_width_style}" if attr_width_style
 
     "style='#{@style}'".squish
   end
