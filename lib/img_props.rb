@@ -40,7 +40,9 @@ class ImgProperties
   end
 
   def attr_style_img
-    "style='width: 100%; #{@style}'".squish
+    return '' unless @style && !@style.empty?
+
+    "style='#{@style}'".squish
   end
 
   def attr_target
