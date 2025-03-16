@@ -29,9 +29,10 @@ class ImgBuilder
 
   def generate_img
     img_classes = @props.classes
+    img_classes = img_classes.squish if img_classes
     <<~END_IMG
       <img #{@props.attr_alt}
-        class="imgImg #{img_classes.squish}"
+        class="imgImg #{img_classes}"
         src="#{@source.src_fallback}"
         #{@props.attr_style_img}
         #{@props.attr_title}
