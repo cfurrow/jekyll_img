@@ -28,7 +28,7 @@ class ImgBuilder
   end
 
   def generate_img
-    img_classes = @props.classes || 'rounded shadow'
+    img_classes = @props.classes
     <<~END_IMG
       <img #{@props.attr_alt}
         class="imgImg #{img_classes.squish}"
