@@ -22,7 +22,10 @@ class ImgProperties
 
   # <img> tag assets, except alignment classes (inline, left, center, right)
   def attr_img_classes
-    @classes || 'rounded shadow'
+    if @classes.nil?
+      return 'rounded shadow'
+    end
+    @classes
   end
 
   def attr_nofollow

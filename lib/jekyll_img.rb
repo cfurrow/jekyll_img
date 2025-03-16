@@ -33,6 +33,7 @@ module Jekyll
       props.alt               = @helper.parameter_specified? 'alt'
       props.caption           = @helper.parameter_specified? 'caption'
       props.classes           = @helper.parameter_specified? 'class'
+      props.classes           ||= @helper.parameter_specified? 'classes'
       props.die_on_img_error  = @die_on_img_error
       props.id                = @helper.parameter_specified? 'id'
       props.nofollow          = @helper.parameter_specified? 'nofollow'

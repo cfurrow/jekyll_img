@@ -28,7 +28,7 @@ class ImgBuilder
   end
 
   def generate_img
-    img_classes = @props.classes
+    img_classes = @props.attr_img_classes
     img_classes = img_classes.squish if img_classes
     <<~END_IMG
       <img #{@props.attr_alt}
